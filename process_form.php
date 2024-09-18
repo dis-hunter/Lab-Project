@@ -6,6 +6,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $email=trim($_POST['email']);
     $password=trim($_POST['password']);
 
+
+    if(empty($username) || empty($email) || empty($password)){
+        die("Please fill in all fields");
+    }
+
     $user=new User();
     if($user->createUser($username, $email, $password)){
         echo "User created successfully";
