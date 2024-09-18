@@ -20,6 +20,13 @@ class User{
     }else{
         return false;
     }
+    }
+    public function getUsers(){
+        $query="SELECT * FROM users";
+        $stmt=$this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 
 
