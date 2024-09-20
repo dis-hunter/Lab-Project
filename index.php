@@ -66,7 +66,7 @@ public  function User_form(){
               
             </div>
             <div class="input-group mb-3">
-                <button class="btn btn-lg btn-primary w-100 fs-6">Sign Up</button>
+                <button class="btn btn-lg btn-primary w-100 fs-6" name="signup">Sign Up</button>
             </div>
             <div class="input-group mb-3">
                 <button class="btn btn-lg btn-light w-100 fs-6"><img src="images\google.png" style="width: 20px;" class="me-2"><small>Sign Up with Google</small></button>
