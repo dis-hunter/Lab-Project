@@ -1,3 +1,10 @@
+<?php
+
+public  function User_form(){
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,3 +87,6 @@
     
 </body>
 </html>
+<?php
+}
+?>
