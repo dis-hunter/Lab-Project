@@ -1,4 +1,5 @@
 <?php
+class index{
 
 public  function User_form(){
 
@@ -88,5 +89,6 @@ public  function User_form(){
 </body>
 </html>
 <?php
+}
 }
 ?>
