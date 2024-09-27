@@ -1,5 +1,5 @@
 <?php
-class index{
+class Form{
 
 public  function User_form(){
 
