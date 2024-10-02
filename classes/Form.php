@@ -30,7 +30,7 @@ public  function User_form(){
     <!-----------------------------------Left Box------------------------------------------------>
 <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style=" height: 90vh; background-color: black;">
 <div class="featured-image mb-3">
-    <img src="images\lab-project1.jpg" class="img-fluid" style="width: 400px; height: 500px; margin-bottom: 40px;">
+    <img src="..\images\lab-project1.jpg" class="img-fluid" style="width: 400px; height: 500px; margin-bottom: 40px;">
 </div>
 
 
@@ -47,32 +47,29 @@ public  function User_form(){
               <p>We are happy to have you .</p>
             </div>
             <form method="post" action="process_form.php"> 
-            <div class="input-group mb-2">
-                <input type="email" class="form-control form-control-lg bg-light fs-6" placeholder="Email address">
-            </div>
-            <div class="input-group mb-1">
-                <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Username">
-            </div>
-            <div class="input-group mb-1">
-                <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
-            </div>
-            <div class="input-group mb-1">
-                <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Confirm Password">
-            </div>
-            <div class="input-group mb-5 d-flex justify-content-between">
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="formCheck">
-                <label for="formCheck" class="form-check-label text-secondary"><small>Remember Me</small></label>
-              </div>
-              
-            </div>
-            <div class="input-group mb-3">
-                <button class="btn btn-lg btn-primary w-100 fs-6" name="signup">Sign Up</button>
-            </div>
-            <div class="input-group mb-3">
-                <button class="btn btn-lg btn-light w-100 fs-6"><img src="images\google.png" style="width: 20px;" class="me-2"><small>Sign Up with Google</small></button>
-            </div>
-            </form>
+    <div class="input-group mb-2">
+        <input name="email" type="email" class="form-control form-control-lg bg-light fs-6" placeholder="Email address" required>
+    </div>
+    <div class="input-group mb-1">
+        <input name="username" type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Username" required>
+    </div>
+    <div class="input-group mb-1">
+        <input name="password" type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" required>
+    </div>
+    <div class="input-group mb-1">
+        <input name="confirm_password" type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Confirm Password" required>
+    </div>
+    <div class="input-group mb-5 d-flex justify-content-between">
+        <div class="form-check">
+            <input name="remember_me" type="checkbox" class="form-check-input" id="formCheck">
+            <label for="formCheck" class="form-check-label text-secondary"><small>Remember Me</small></label>
+        </div>
+    </div>
+    <div class="input-group mb-3">
+        <button class="btn btn-lg btn-primary w-100 fs-6" name="signup" type="submit">Sign Up</button>
+    </div>
+</form>
+
             
 
 
