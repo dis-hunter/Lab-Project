@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <style>
+
+    body, html{
+        padding:0;
+        margin:0;
+        height:100%;
+        background-color: black;
+    }
     .container{
         display: flex;
             justify-content: center;
@@ -19,13 +26,27 @@
         justify-content:center;
         flex-direction:column;
         align-items: center;
-        background-color: #f9f9f9;
+        background-color: black;
         padding:30px;
         Width:500px;
         height:400px;
         text-align:center;
-        border:1px solid #ccc;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border:2px solid transparent;
+        color:white;
+        border-radius:10px;
+        box-shadow: 0 0 20px rgba(0,255,0,0.8),
+                    0 0 30px rgba(0,255,0,0.6),
+                    0 0 40px rgba(0,255,0,0.4);
+        transition: box-shadow 0.3s ease
+    }
+
+    .form:hover{
+        box-shadow: 0 0 30px rgba(0,255,0,1),
+                    0 0 40px rgba(0,255,0,0.9),
+                    0 0 50px rgba(0,255,0,0.7);
+    }
+    h1{
+        margin-bottom: 20px;
     }
     button{
         padding: 10px 20px;
