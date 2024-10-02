@@ -18,6 +18,7 @@ spl_autoload_register('classAutoLoad');
 
 
 $Form=new Form();
+$User=new User();
 
 
 ?>

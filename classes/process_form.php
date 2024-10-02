@@ -27,7 +27,7 @@ class process_form {
                 // Create user
                 $user = new User();
                 if ($user->createUser($username, $email, $password)) {
-                    echo "User created successfully.";
+                    header("Location: ViewUsers.html");
                 } else {
                     echo "Error registering user.";
                 }
