@@ -1,12 +1,10 @@
 <?php
 require_once 'User.php';
+session_start(); // Start session to store OTP
 
 class process_form {
     public function SignUp() {
         if (isset($_POST['signup'])) {
-            // Debug: print the entire $_POST array
-            
-
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Capture form data
                 $username = trim($_POST['username']);
@@ -24,12 +22,24 @@ class process_form {
                     die("Passwords do not match.");
                 }
 
-                // Create user
-                $user = new User();
-                if ($user->createUser($username, $email, $password)) {
-                    header("Location: ViewUsers.html");
+                // Generate OTP
+                $otp = rand(100000, 999999);
+                $_SESSION['otp'] = $otp; // Store OTP in session
+                $_SESSION['user_data'] = [
+                    'username' => $username,
+                    'email' => $email,
+                    'password' => $password
+                ];
+
+                // Send OTP via email (you can replace this with PHPMailer or other mail libraries)
+                $subject = "Your OTP Code";
+                $message = "Your OTP code is: " . $otp;
+                $headers = "From: noreply@yourwebsite.com"; // Replace with your domain
+                if (mail($email, $subject, $message, $headers)) {
+                    header("Location: verify_otp.php"); // Redirect to OTP verification page
+                    exit;
                 } else {
-                    echo "Error registering user.";
+                    echo "Failed to send OTP. Please try again.";
                 }
             }
         }
