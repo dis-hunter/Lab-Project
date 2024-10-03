@@ -1,9 +1,20 @@
 <?php
-session_start();
+session_start(); // Start the session
 
+// Check if OTP exists in the session
+if (!isset($_SESSION['otp'])) {
+    echo "No OTP found. Please request a new one.";
+    exit;
+}
+
+// Debugging: Output the session OTP and the entered OTP
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $entered_otp = trim($_POST['otp']);
     
+    // Debugging output
+    echo "Entered OTP: $entered_otp<br>";
+    echo "Session OTP: " . $_SESSION['otp'] . "<br>";
+
     // Verify OTP
     if ($entered_otp == $_SESSION['otp']) {
         // OTP matches, proceed to user creation

@@ -1,4 +1,5 @@
 <?php
+session_start(); // Start the session
 require 'C:/xampp/htdocs/PHPMailer/src/PHPMailer.php';
 require 'C:/xampp/htdocs/PHPMailer/src/SMTP.php';
 require 'C:/xampp/htdocs/PHPMailer/src/Exception.php';
@@ -43,12 +44,12 @@ class process_form {
                     $mail->Host       = 'smtp.gmail.com';                      // Set the SMTP server to send through
                     $mail->SMTPAuth   = true;                                  // Enable SMTP authentication
                     $mail->Username   = 'eoringe372@gmail.com';                // SMTP username
-                    $mail->Password   = 'your-email-password';                 // SMTP password
+                    $mail->Password   = 'wdjk opaf jhdx wjjr';                 // SMTP password
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;        // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
                     $mail->Port       = 587;                                   // TCP port to connect to
 
                     //Recipients
-                    $mail->setFrom('your-email@gmail.com', 'Your Website');
+                    $mail->setFrom('eoringe372@gmail.com', 'Emmanuel\'s Website');
                     $mail->addAddress($email);                                 // Add the recipient's email address
 
                     // Content
