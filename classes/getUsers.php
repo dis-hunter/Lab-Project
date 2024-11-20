@@ -1,12 +1,9 @@
 <?php
 // Include database connection
-require_once 'Database.php';
-require_once 'User.php';
-
-$user = new User();
+require_once 'load.php';
 
 try {
-    $users = $user->getUsers(); // Fetch users from the database
+    $users = $User->getUsers(); // Fetch users from the database
 
     // Debugging: Check if $users is an array
     if (is_array($users)) {
